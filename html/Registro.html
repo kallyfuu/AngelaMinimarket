@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AngelaMinimarket-Registro</title>
+    <!-- Enlace al CSS de Bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+    <!-- Enlace al CSS personalizado -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <!-- Enlaza el archivo CSS de Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
+    <style>
+        /* Estilos personalizados para el logo */
+        .navbar-brand img {
+            width: 100px; /* Ancho del logo */
+        }
+        /* Estilos personalizados para las cards */
+        .carousel img {
+            border-radius: 10px;
+            height: 430px;
+        }
+        .error {
+            color: red;
+        }
+        .success {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <!-- Contenido del encabezado -->
+    <!-- Header con menú -->
+    <header class="header bg-white">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <!-- Logo -->
+                <a class="navbar-brand" href="#">
+                    <img src="../img/Angela minimarket.png" alt="Logo"/>
+                </a>
+                <h2>Angela Minimarket</h2>
+                <!-- Botón de menú para dispositivos móviles -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Menú de navegación -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link text-dark" href="Index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="Reservapan.html">¿Quieres reservar pan?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="Contacto.html">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="iniciosesion.html">Iniciar Sesion</a>
+                        </li>
+                        <!-- Icono de carrito -->
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#">
+                                <i class="fas fa-shopping-cart"></i> Carrito
+                                <!-- Icono de carrito -->
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container mt-5">
+        <h2>Registrate</h2>
+        <form id="registroForm">
+            <div class="form-group">
+                <label for="nombre_login">Nombre de usuario:</label>
+                <input type="text" class="form-control" id="nombre_login" name="nombre_login" required>
+                <span id="nombre_error" class="error"></span>
+            </div>
+            <div class="form-group">
+                <label for="email_login">Correo electrónico:</label>
+                <input type="email" class="form-control" id="email_login" name="email_login" required>
+                <span id="email_error" class="error"></span>
+            </div>
+            <div class="form-group">
+                <label for="password_login">Contraseña:</label>
+                <input type="password" class="form-control" id="password_login" name="password_login" required>
+                <span id="password_error" class="error"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Registrarse</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Angela MiniMarket</h5>
+                    <p>
+                        Somos un mercado familiar ubicado en Puerto Montt, ofreciendo
+                        productos frescos y de alta calidad a precios convenientes.
+                    </p>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="mailto:contacto@angelamarket.cl">Angela.libreria1@gmail.com</a>
+                        </li>
+                        <li><a href="tel:+56942595070">(+56) 9 4259 5070</a></li>
+                        <li><address>5505193 Puerto Montt, Los Lagos, Chile</address></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <h5>Horario de atención</h5>
+                    <ul class="list-unstyled">
+                        <li>Lunes a Jueves: 9:00 - 22:00 hrs.</li>
+                        <li>Viernes y Sábado: 9:00 - 23:00 hrs.</li>
+                        <li>Domingo: Cerrado</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <h5>Redes sociales</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/angelaminimarket/"><i
+                                    class="fab fa-instagram"></i> Instagram</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script para la alerta -->
+    <script>
+        document.getElementById("registroForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Evita que se envíe el formulario
+            // Simulación de registro exitoso
+            // Suponiendo que el registro es exitoso
+            // Se mostrará una alerta de éxito
+            alert("¡Usuario registrado exitosamente!");
+            // Aquí se puede redirigir a otra página o realizar otra acción después del registro exitoso
+        });
+    </script>
+</body>
+</html>
