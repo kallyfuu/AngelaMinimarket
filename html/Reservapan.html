@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AngelaMinimarket-Pan</title>
+    <title>AngelaMinimarket-ReservaPan</title>
     <!-- Enlace al CSS de Bootstrap -->
     <link
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -16,6 +16,8 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
       rel="stylesheet"
     />
+    <link rel="icon" type="image/png" href="../img/Angela minimarket.png">
+
 
     <style>
       /* Estilos personalizados para el logo */
@@ -31,17 +33,17 @@
       }
     </style>
 </head>
-<body>
+<body id="body">
     <!-- Contenido del encabezado -->
     <!-- Header con menú -->
-    <header class="header bg-white">
+    <header class="header">
       <div class="container">
         <nav class="navbar navbar-expand-lg navbar-dark">
           <!-- Logo -->
           <a class="navbar-brand" href="#">
             <img src="../img/Angela minimarket.png" alt="Logo"/>
           </a>
-          <h2>Angela Minimarket</h1>
+        
           <!-- Botón de menú para dispositivos móviles -->
           <button
             class="navbar-toggler"
@@ -62,8 +64,7 @@
                 >Inicio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-dark" href="Reservapan.html"
-                  >¿Quieres reservar pan?</a
+                <a class="nav-link text-dark" href="Reservapan.html">¿Quieres reservar pan?</a
                 >
               </li>
               <li class="nav-item">
@@ -84,6 +85,7 @@
           </div>
         </nav>
       </div>
+      <br>
     </header>
     <div class="carrito">
       <!-- Botón para cerrar el carrito -->
@@ -103,123 +105,94 @@
         <button class="confirmar-compra">Confirmar</button>
       </div>
     </div>
+    <br>
     <div class="header-content container text-dark">
       <h1>Ofertas</h1>
     </div>
     <!-- Sección de cards -->
-    <section class="offers">
-      <div class="container">
-        <div class="row">
-          <div
-            class="col-md-6 col-lg-3 mb-4"
-            style="display: inline-block; width: 32%; margin-right: 2%"
-          >
-            <div class="offer-card">
-              <div class="offer-details">
-                <span class="discount">24 Horas</span>
-              </div>
-              <img src="../img/hallulla1.jpg" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <span class="original-price">$2200</span>
-                <span class="current-price">$2500</span>
-                <a
-                  class="agregar-carrito"
-                  data-nombre="Ayuya KG"
-                  data-precio="1700"
-                  >Add to Cart</a
-                >
-              </div>
-            </div>
-          </div>
-          <div
-            class="col-md-6 col-lg-3 mb-4"
-            style="display: inline-block; width: 32%; margin-right: 2%"
-          >
-            <div class="offer-card">
-              <div class="offer-details">
-                <span class="discount">24 Horas</span>
-              </div>
-              <img src="../img/frances1.1.jpg" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <span class="original-price">$2400</span>
-                <span class="current-price">$2750</span>
-                <a
-                  class="agregar-carrito"
-                  data-nombre="Marraqueta KG"
-                  data-precio="1900"
-                  >Add to Cart</a
-                >
-              </div>
-            </div>
-          </div>
-          <div
-            class="col-md-6 col-lg-3 mb-4"
-            style="display: inline-block; width: 32%; margin-right: 2%"
-          >
-            <div class="offer-card">
-              <div class="offer-details">
-                <span class="discount">24 Horas</span>
-              </div>
-              <img src="../img/ciabatta1.jpg" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <span class="original-price">$2400</span>
-                <span class="current-price">$2700</span>
-                <a
-                  class="agregar-carrito"
-                  data-nombre="chabata KG"
-                  data-precio="2500"
-                  >Add to Cart</a
-                >
-              </div>
-            </div>
-          </div>
-          <div
-            class="col-md-6 col-lg-3 mb-4"
-            style="display: inline-block; width: 32%; margin-right: 2%"
-          >
-            <div class="offer-card">
-              <div class="offer-details">
-                <span class="discount">24 Horas</span>
-              </div>
-              <img src="../img/Hambuerguesa1.jpg" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <span class="original-price">$2400</span>
-                <span class="current-price">$2700</span>
-                <a
-                  class="agregar-carrito"
-                  data-nombre="chabata KG"
-                  data-precio="2500"
-                  >Add to Cart</a
-                >
-              </div>
-            </div>
-          </div>
-          <div
-            class="col-md-6 col-lg-3 mb-4"
-            style="display: inline-block; width: 32%; margin-right: 2%"
-          >
-            <div class="offer-card">
-              <div class="offer-details">
-                <span class="discount">24 Horas</span>
-              </div>
-              <img src="../img/pa.jpg" class="card-img-top" alt="..." />
-              <div class="card-body">
-                <span class="original-price">$2400</span>
-                <span class="current-price">$2700</span>
-                <a
-                  class="agregar-carrito"
-                  data-nombre="chabata KG"
-                  data-precio="2500"
-                  >Add to Cart</a
-                >
-              </div>
-            </div>
+<section class="offers">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="offer-card">
+          <img src="../img/hallulla1.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <span class="descripcion">Pan Hallulla</span>
+            <span class="current-price">$2500</span>
+            <br>
+            <a class="agregar-carrito" data-nombre="hallulla KG" data-precio="2500">Agregar al carrito</a>
           </div>
         </div>
       </div>
-    </section>
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="offer-card">
+          <img src="../img/frances1.1.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <span class="descripcion">Pan Francés</span>
+            <span class="current-price">$2750</span>
+            <br>
+            <a class="agregar-carrito" data-nombre="Marraqueta KG" data-precio="2750">Agregar al carrito</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="offer-card">
+          <img src="../img/ciabatta1.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <span class="descripcion">Pan Ciabatta</span>
+            <span class="current-price">$2900</span>
+            <br>
+            <a class="agregar-carrito" data-nombre="Ciabatta KG" data-precio="2900">Agregar al carrito</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="offer-card">
+          <img src="../img/Hambuerguesa1.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <span class="descripcion">Pan Amasado</span>
+            <span class="current-price">$2700</span>
+            <br>
+            <a class="agregar-carrito" data-nombre="Amasado KG" data-precio="2700">Agregar al carrito</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="offer-card">
+          
+          <div class="offer-details">
+            <span class="discount">Nuevo</span>
+          </div>
+          <img src="../img/pa.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <span class="descripcion">Pan "Bocado de Dama"</span>
+            <span class="current-price">$2700</span>
+            <br>
+            <a class="agregar-carrito" data-nombre="Bocado de dama KG" data-precio="2700">Agregar al carrito</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="offer-card">
+          <div class="offer-details">
+            <span class="discount">Nuevo</span>
+          </div>
+          <img src="../img/integral1.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <span class="descripcion">Pan Integral</span>
+            <span class="current-price">$2900</span>
+            <br>
+            <a class="agregar-carrito" data-nombre="Integral KG" data-precio="2900">Agregar al carrito</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
     <!-- Footer -->
     <footer class="footer bg-dark text-white mt-5">
+      <br>
       <div class="container">
         <div class="row">
           <div class="col-md-4">
@@ -230,7 +203,7 @@
             </p>
             <ul class="list-unstyled">
               <li>
-                <a href="mailto:contacto@angelamarket.cl"
+                <a href="mailto:Angela.libreria1@gmail.com"
                   >Angela.libreria1@gmail.com</a
                 >
               </li>
@@ -265,5 +238,7 @@
         </div>
       </div>
     </footer>
+    <script src="../js/car.js"></script>
+
 </body>
 </html>

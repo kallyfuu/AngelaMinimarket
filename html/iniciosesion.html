@@ -16,6 +16,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
       rel="stylesheet"
     />
+    <link rel="icon" type="image/png" href="../img/Angela minimarket.png">
 
     <style>
       /* Estilos personalizados para el logo */
@@ -39,58 +40,41 @@
 <body>
     <!-- Contenido del encabezado -->
     <!-- Header con menú -->
-    <header class="header bg-white">
-        <div class="container">
-          <nav class="navbar navbar-expand-lg navbar-dark">
-            <!-- Logo -->
-            <a class="navbar-brand" href="#">
-              <img src="../img/Angela minimarket.png" alt="Logo"/>
-            </a>
-            <h2>Angela Minimarket</h2>
-            <!-- Botón de menú para dispositivos móviles -->
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-toggle="collapse"
-              data-target="#navbarNav"
-              aria-controls="navbarNav"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <!-- Menú de navegación -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                  <a class="nav-link text-dark" href="Index.html"
-                  >Inicio</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-dark" href="Reservapan.html"
-                    >¿Quieres reservar pan?</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-dark" href="Contacto.html">Contacto</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-dark" href="iniciosesion.html">Iniciar Sesion</a>
-                </li>
-                
-  
-                <!-- Icono de carrito -->
-                <li class="nav-item">
-                  <a class="nav-link text-dark" href="#">
-                    <i class="fas fa-shopping-cart"> Carrito</i>
-                    <!-- Icono de carrito -->
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </nav>
+    <!-- Header con menú -->
+    <header class="header">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <!-- Logo -->
+        <div class="logo">
+          <a class="navbar-brand" href="Index.html">
+            <img src="../img/Angela minimarket.png" alt="Logo"/>
+          </a>
         </div>
-      </header>
+        <!-- Menú de navegación -->
+        <div class="conteheader" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link text-dark" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="Reservapan.html">¿Quieres reservar pan?</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="Contacto.html">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="iniciosesion.html">Iniciar Sesión</a>
+            </li>
+            <!-- Icono de carrito -->
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="#">
+                <i class="fas fa-shopping-cart"> Carrito</i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <br>
+    </header>
       <div class="container mt-5">
         <h1>Login</h1>
         <form method="post" id="loginForm">
@@ -108,6 +92,7 @@
       </div>
     <!-- Footer -->
     <footer class="footer bg-dark text-white mt-5">
+      <br>
       <div class="container">
         <div class="row">
           <div class="col-md-4">
@@ -118,7 +103,7 @@
             </p>
             <ul class="list-unstyled">
               <li>
-                <a href="mailto:contacto@angelamarket.cl"
+                <a href="mailto:Angela.libreria1@gmail.com"
                   >Angela.libreria1@gmail.com</a
                 >
               </li>

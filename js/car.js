@@ -40,7 +40,7 @@ function actualizarCarrito() {
         Precio: $${precio} x ${cantidad}
         <button class="restar-item" data-nombre="${nombre}">-</button>
         <button class="sumar-item" data-nombre="${nombre}">+</button>
-        <button class="eliminar-item" data-nombre="${nombre}">Eliminar</button>
+          <button class="eliminar-item" data-nombre="${nombre}">X</button>
       </span>
     `;
     listaCarrito.appendChild(li);
@@ -136,7 +136,8 @@ function ocultarModalCompra() {
 function confirmarCompra() {
   vaciarCarrito();
   ocultarModalCompra();
-  alert('¡Gracias por tu compra!');
+  alert('¡Gracias por tu Reserva!');
+
 }
 
 // Eventos
@@ -153,3 +154,16 @@ document.addEventListener('DOMContentLoaded', () => {
     boton.addEventListener('click', agregarProducto);
   });
 });
+
+// Función para confirmar la compra
+function confirmarCompra() {
+  if (carritoItems.length === 0) {
+    alert('El carrito está vacío. No se puede confirmar la compra.');
+    return;
+  }
+  
+  const total = calcularTotal();
+  vaciarCarrito();
+  ocultarModalCompra();
+  alert(`¡Gracias por tu Reserva! Total a pagar: $${total}`);
+}
