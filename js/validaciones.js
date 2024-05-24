@@ -57,3 +57,25 @@ function isValidEmail(email) {
   const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,})+$/;
   return emailRegex.test(email);
 }
+
+function validateForm() {
+  var username = document.getElementById('username').value;
+  var password = document.getElementById('password').value;
+  var usernameError = document.getElementById('usernameError');
+  var passwordError = document.getElementById('passwordError');
+  usernameError.innerHTML = '';
+  passwordError.innerHTML = '';
+  var isValid = true;
+
+  if (!username) {
+    usernameError.innerHTML = 'Por favor, ingresa tu nombre de usuario';
+    isValid = false;
+  }
+
+  if (!password) {
+    passwordError.innerHTML = 'Por favor, ingresa tu contraseña';
+    isValid = false;
+  }
+
+  return isValid;
+}
